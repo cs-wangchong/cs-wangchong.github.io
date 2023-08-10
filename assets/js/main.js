@@ -38,8 +38,10 @@
 						mode: 'top',
 						enter: function() {
 							$nav.addClass('alt');
+							$nav.css('display', 'block');
 						},
 						leave: function() {
+							$nav.css('display', 'none');
 							$nav.removeClass('alt');
 						},
 					});
