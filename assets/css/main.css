@@ -128,7 +128,7 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "Times New Roman", Times, serif;
 		font-size: 15pt;
 		font-weight: 300;
 		line-height: 1.65;
@@ -3272,7 +3272,7 @@ input, select, textarea {
 		border-top-right-radius: 0.25em;
 		cursor: default;
 		text-align: center;
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: "Times New Roman", Times, serif;
 	}
 
 		#nav input, #nav select, #nav textarea {
@@ -3403,9 +3403,9 @@ input, select, textarea {
 
 	#main {
 		background-color: #ffffff;
-		color: #6a6a6a;
+		color: #202020;
 		border-radius: 0.25em;
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: "Times New Roman", Times, serif;
 	}
 
 		#main input, #main select, #main textarea {
@@ -3852,21 +3852,33 @@ input, select, textarea {
 			}
 
 		}
-
-
-
 /* publications */
 
+
+.tool-name {
+	font-variant: small-caps;
+	font-feature-settings: smcp;
+}
+
+.paper-title {
+	color: rgb(0, 0, 0);
+	font-weight: 600;
+}
+
+.myname {
+	font-weight: 600;
+	display: inline-block;
+}
 
 .tag {
 	height: 1.5em;
 	vertical-align:top;
-	background-color: rgba(0, 110, 110, 0.5);
+	background-color: rgba(255, 255, 0, 0.8);
 	border-radius: 0.5em;
 	display: inline-block;
 	padding:0 0.5em;
-	color: #000000;
-	font-color: #EEEEEE;
+	color: rgb(0, 0, 0);
+	font-weight: 600;
 }	
 
 .icon-award { 
