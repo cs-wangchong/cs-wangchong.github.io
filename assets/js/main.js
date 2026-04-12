@@ -122,4 +122,41 @@
 			speed: 1000
 		});
 
+	// News collapse/expand.
+		var $newsList = $('#news-list');
+
+		if ($newsList.length > 0) {
+
+			var $newsItems = $newsList.children('li');
+			var visibleCount = 10;
+
+			if ($newsItems.length > visibleCount) {
+
+				$newsItems.slice(visibleCount).hide();
+
+				var $newsToggle = $('<a href="#" id="news-toggle">Show More</a>');
+
+				$newsToggle.on('click', function(event) {
+
+					event.preventDefault();
+
+					var expanded = $newsToggle.attr('data-expanded') === 'true';
+
+					if (expanded) {
+						$newsItems.slice(visibleCount).stop(true, true).slideUp(200);
+						$newsToggle.text('Show More').attr('data-expanded', 'false');
+					}
+					else {
+						$newsItems.slice(visibleCount).stop(true, true).slideDown(200);
+						$newsToggle.text('Show Less').attr('data-expanded', 'true');
+					}
+
+				});
+
+				$newsList.after($newsToggle);
+
+			}
+
+		}
+
 })(jQuery);

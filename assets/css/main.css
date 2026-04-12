@@ -2888,6 +2888,37 @@ input, select, textarea {
 
 		}
 
+	#news-list {
+		margin-bottom: 0.25em;
+	}
+
+	#news-toggle {
+		margin-top: 0;
+		margin-left: 1.5em;
+		padding: 0;
+		border: 0;
+		background: transparent;
+		color: #7a7a7a;
+		font-size: 0.85em;
+		line-height: 1;
+		border-bottom: 1px dashed #9a9a9a;
+		cursor: pointer;
+		display: inline-block;
+	}
+
+		@media screen and (max-width: 736px) {
+
+			#news-toggle {
+				margin-left: 1.25em;
+			}
+
+		}
+
+		#news-toggle:hover {
+			color: #5f5f5f;
+			border-bottom-color: #7f7f7f;
+		}
+
 /* Statistics */
 
 	.statistics {
@@ -3098,6 +3129,84 @@ input, select, textarea {
 		border-color: rgba(255, 255, 255, 0.35);
 	}
 
+/* Profile Aside */
+
+	.profile-aside {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		text-align: center;
+		-moz-flex: 0 1 auto;
+		-webkit-flex: 0 1 auto;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
+		margin-left: 2em;
+	}
+
+		.profile-aside .image {
+			margin-left: 0;
+			margin-bottom: 0.85em;
+		}
+
+		.profile-info h2 {
+			font-size: 1.4em;
+			margin: 0 0 0.2em 0;
+		}
+
+		.profile-info .profile-subtitle {
+			font-size: 0.9em;
+			margin: 0 0 0.65em 0;
+			letter-spacing: 0;
+		}
+
+		.profile-info .profile-icons {
+			margin: 0;
+		}
+
+		.profile-info .profile-icons .icon-email,
+		.profile-info .profile-icons .icon-google-scholar,
+		.profile-info .profile-icons .icon-github {
+			width: 1.9em;
+			height: 1.9em;
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.profile-aside {
+				margin-left: 0;
+				margin-bottom: 2em;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.profile-info h2 {
+				font-size: 1.2em;
+			}
+
+			.profile-info .profile-icons li {
+				padding: 0 0.35em 0 0;
+			}
+
+			.profile-info .profile-icons .icon-email,
+			.profile-info .profile-icons .icon-google-scholar,
+			.profile-info .profile-icons .icon-github {
+				width: 1.75em;
+				height: 1.75em;
+			}
+
+		}
+
 /* Header */
 
 	#header {
@@ -3114,8 +3223,26 @@ input, select, textarea {
 			letter-spacing: -0.025em;
 		}
 
+		#header .hero-identity {
+			margin-bottom: 0.5em;
+		}
+
+		#header .hero-subtitle {
+			margin-bottom: 0;
+		}
+
+		#header .hero-icons {
+			margin: 0;
+		}
+
+		#header h2 {
+			font-size: 1.1em;
+			line-height: 1.35;
+			letter-spacing: 0;
+		}
+
 		#header.alt {
-			padding: 3em 5em 3em 5em ;
+			padding: 1.5em 0 ;
 		}
 
 			#header.alt h1 {
@@ -3160,7 +3287,7 @@ input, select, textarea {
 			}
 
 				#header.alt {
-					padding: 3em 4em 3em 4em ;
+					padding: 1.5em 0 ;
 				}
 
 		}
@@ -3172,7 +3299,7 @@ input, select, textarea {
 			}
 
 				#header.alt {
-					padding: 2em 3em 2em 3em ;
+					padding: 1.5em 0 ;
 				}
 
 		}
@@ -3180,8 +3307,55 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
-				padding: 3em 2em 0.1em 2em ;
+				padding: 2.5em 1.5em 0.1em 1.5em ;
 			}
+
+				#header .hero-identity {
+					display: -moz-flex;
+					display: -webkit-flex;
+					display: -ms-flex;
+					display: flex;
+					-moz-flex-wrap: wrap;
+					-webkit-flex-wrap: wrap;
+					-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+					-moz-justify-content: center;
+					-webkit-justify-content: center;
+					-ms-justify-content: center;
+					justify-content: center;
+					-moz-align-items: baseline;
+					-webkit-align-items: baseline;
+					-ms-align-items: baseline;
+					align-items: baseline;
+					gap: 0.2em 0.55em;
+					margin-bottom: 0.35em;
+				}
+
+				#header h1 {
+					font-size: 2.15em;
+					line-height: 1.15;
+					margin: 0;
+				}
+
+				#header h2 {
+					font-size: 1em;
+				}
+
+				#header .hero-subtitle {
+					margin: 0;
+					white-space: nowrap;
+				}
+
+				#header .hero-icons li {
+					padding: 0 0.45em 0 0;
+				}
+
+				#header .hero-icons .icon-email,
+				#header .hero-icons .icon-google-scholar,
+				#header .hero-icons .icon-github {
+					width: 2.5em;
+					height: 2.5em;
+				}
 
 				#header p {
 					font-size: 1em;
@@ -3193,11 +3367,11 @@ input, select, textarea {
 					}
 
 				#header.alt {
-					padding: 1em 2em 1em 2em ;
+					padding: 1em 0 ;
 				}
 
 					#header.alt h1 {
-						font-size: 2.5em;
+						font-size: 2.15em;
 					}
 
 		}
@@ -3205,11 +3379,34 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#header {
-				padding: 3em 1.5em 0.1em 1.5em ;
+				padding: 2.2em 1.1em 0.1em 1.1em ;
 			}
 
+				#header .hero-identity {
+					gap: 0.15em 0.45em;
+				}
+
+				#header h1 {
+					font-size: 1.95em;
+				}
+
+				#header .hero-subtitle {
+					font-size: 0.95em;
+				}
+
+				#header .hero-icons li {
+					padding: 0 0.35em 0 0;
+				}
+
+				#header .hero-icons .icon-email,
+				#header .hero-icons .icon-google-scholar,
+				#header .hero-icons .icon-github {
+					width: 2.35em;
+					height: 2.35em;
+				}
+
 				#header.alt {
-					padding: 1em 1.5em 1em 1.5em ;
+					padding: 0.75em 0 ;
 				}
 
 		}
@@ -3217,11 +3414,26 @@ input, select, textarea {
 		@media screen and (max-width: 360px) {
 
 			#header {
-				padding: 2.5em 1em 0.1em 1em ;
+				padding: 2em 0.9em 0.1em 0.9em ;
 			}
 
+				#header h1 {
+					font-size: 1.75em;
+				}
+
+				#header .hero-subtitle {
+					font-size: 0.9em;
+				}
+
+				#header .hero-icons .icon-email,
+				#header .hero-icons .icon-google-scholar,
+				#header .hero-icons .icon-github {
+					width: 2.15em;
+					height: 2.15em;
+				}
+
 				#header.alt {
-					padding: 0.5em 1em 0.5em 1em ;
+					padding: 0.75em 0 ;
 				}
 
 		}
@@ -3390,7 +3602,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#nav {
-				display: none;
+				display: none !important;
 			}
 
 				#nav + #main {
